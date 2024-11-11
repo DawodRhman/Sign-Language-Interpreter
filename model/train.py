@@ -19,19 +19,19 @@ img_height, img_width = 500, 500
 batch_size = 16
 
 # Data Augmentation for training
-train_datagen = ImageDataGenerator(
-    rescale=1.0 / 255,
-    rotation_range=40,
-    width_shift_range=0.3,
-    height_shift_range=0.3,
-    shear_range=0.3,
-    zoom_range=0.3,
-    horizontal_flip=True,
-    fill_mode='nearest'
-)
+# train_datagen = ImageDataGenerator(
+#     rescale=1.0 / 255,
+#     rotation_range=40,
+#     width_shift_range=0.3,
+#     height_shift_range=0.3,
+#     shear_range=0.3,
+#     zoom_range=0.3,
+#     horizontal_flip=True,
+#     fill_mode='nearest'
+# )
 
-validate_datagen = ImageDataGenerator(rescale=1.0 / 255)
-test_datagen = ImageDataGenerator(rescale=1.0 / 255)
+# validate_datagen = ImageDataGenerator(rescale=1.0 / 255)
+# test_datagen = ImageDataGenerator(rescale=1.0 / 255)
 
 # Loading the data
 train_generator = train_datagen.flow_from_directory(
